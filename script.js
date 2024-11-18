@@ -21,7 +21,7 @@ function reliableMultiply(a, b) {
     try { // attempts to call primitiveMultiply
       return primitiveMultiply(a, b); // If primitiveMultiply succeeds it returns the result
     } catch (e) { // If an error occurs it’s caught by the catch block.
-      if (!(e instanceof MultiplicatorUnitFailure)) { // checks if the error e is an instance of the MultiplicatorUnitFailure class.
+      if (!(e instanceof MultiplicatorUnitFailure)) { // checks if the error is an instance of the MultiplicatorUnitFailure class.
         throw e; // Rethrows the caught error
       }
     }
