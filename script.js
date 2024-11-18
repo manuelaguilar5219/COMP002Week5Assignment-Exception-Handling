@@ -20,9 +20,9 @@ function reliableMultiply(a, b) {
   while (true) { // a loop that repeatedly attempts the multiplication until it succeeds
     try { // attempts to call primitiveMultiply
       return primitiveMultiply(a, b); // If primitiveMultiply succeeds it returns the result
-    } catch (e) {
-      if (!(e instanceof MultiplicatorUnitFailure)) {
-        throw e;
+    } catch (e) { // If an error occurs it’s caught by the catch block.
+      if (!(e instanceof MultiplicatorUnitFailure)) { // checks if the error e is an instance of the MultiplicatorUnitFailure class.
+        throw e; // Rethrows the caught error
       }
     }
   }
